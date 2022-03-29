@@ -1,0 +1,3 @@
+-v BROWSER:chrome
+-v BASE_URL:  https://hportal.webmotors.com.br/
+-d .\log
