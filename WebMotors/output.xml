@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20220329 00:47:23.207" rpa="false" schemaversion="2">
-<suite id="s1" name="Webmotors" source="C:\QANinja\WebMotors\tests\webmotors.robot">
+<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20220329 12:53:31.717" rpa="false" schemaversion="2">
+<suite id="s1" name="Webmotors" source="C:\QANinja\processo-webmotors\WebMotors\tests\webmotors.robot">
 <kw name="Open Session" library="BasePage" type="SETUP">
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>"${browser}" == "chrome"</arg>
@@ -11,42 +11,42 @@
 <arg>${LOGIN URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220329 00:47:23.498" level="INFO">Opening browser 'chrome' to base url 'https://hportal.webmotors.com.br/'.</msg>
-<status status="PASS" starttime="20220329 00:47:23.498" endtime="20220329 00:47:28.283"/>
+<msg timestamp="20220329 12:53:31.976" level="INFO">Opening browser 'chrome' to base url 'https://hportal.webmotors.com.br/'.</msg>
+<status status="PASS" starttime="20220329 12:53:31.976" endtime="20220329 12:53:40.993"/>
 </kw>
-<status status="PASS" starttime="20220329 00:47:23.497" endtime="20220329 00:47:28.284"/>
+<status status="PASS" starttime="20220329 12:53:31.976" endtime="20220329 12:53:40.993"/>
 </kw>
-<status status="PASS" starttime="20220329 00:47:23.497" endtime="20220329 00:47:28.284"/>
+<status status="PASS" starttime="20220329 12:53:31.975" endtime="20220329 12:53:40.993"/>
 </kw>
 <kw name="Set Window Size" library="SeleniumLibrary">
 <arg>1680</arg>
 <arg>1200</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" starttime="20220329 00:47:28.284" endtime="20220329 00:47:28.414"/>
+<status status="PASS" starttime="20220329 12:53:40.994" endtime="20220329 12:53:41.211"/>
 </kw>
 <kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
 <arg>60 seconds</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220329 00:47:28.415" endtime="20220329 00:47:28.420"/>
+<status status="PASS" starttime="20220329 12:53:41.212" endtime="20220329 12:53:41.215"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>60 seconds</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220329 00:47:28.420" endtime="20220329 00:47:28.425"/>
+<status status="PASS" starttime="20220329 12:53:41.215" endtime="20220329 12:53:41.217"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>.1 seconds</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220329 00:47:28.426" endtime="20220329 00:47:28.427"/>
+<status status="PASS" starttime="20220329 12:53:41.218" endtime="20220329 12:53:41.218"/>
 </kw>
 <kw name="Set Selenium Timeout" library="SeleniumLibrary">
 <arg>60 seconds</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" starttime="20220329 00:47:28.428" endtime="20220329 00:47:28.532"/>
+<status status="PASS" starttime="20220329 12:53:41.219" endtime="20220329 12:53:41.332"/>
 </kw>
-<status status="PASS" starttime="20220329 00:47:23.485" endtime="20220329 00:47:28.533"/>
+<status status="PASS" starttime="20220329 12:53:31.975" endtime="20220329 12:53:41.332"/>
 </kw>
-<test id="s1-t1" name="Cenário 02: Pesquisa por veiculo cadastrado">
+<test id="s1-t1" name="Cenário 03: Pesquisa por comprar motos">
 <kw name="Dado que acesso ao site WebMotors" library="webmotorsActions">
 <arg>webmotors.json</arg>
 <kw name="go to page" library="helpers">
@@ -55,10 +55,10 @@
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${Link}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220329 00:47:28.545" level="INFO">Opening url 'https://hportal.webmotors.com.br/'</msg>
-<status status="PASS" starttime="20220329 00:47:28.544" endtime="20220329 00:47:30.417"/>
+<msg timestamp="20220329 12:53:41.344" level="INFO">Opening url 'https://hportal.webmotors.com.br/'</msg>
+<status status="PASS" starttime="20220329 12:53:41.343" endtime="20220329 12:53:43.308"/>
 </kw>
-<status status="PASS" starttime="20220329 00:47:28.541" endtime="20220329 00:47:30.418"/>
+<status status="PASS" starttime="20220329 12:53:41.341" endtime="20220329 12:53:43.309"/>
 </kw>
 <kw name="Clicar no Botão" library="helpers">
 <arg>(//button[@class="sc-htoDjs gtMZoW"])['OK']</arg>
@@ -68,15 +68,15 @@
 <arg>${Espera_Global}</arg>
 <arg>'Botão ${Elemento} não encontrado na página'</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220329 00:47:30.421" endtime="20220329 00:47:30.701"/>
+<status status="PASS" starttime="20220329 12:53:43.312" endtime="20220329 12:53:43.572"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${Elemento}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220329 00:47:30.703" level="INFO">Clicking button '(//button[@class="sc-htoDjs gtMZoW"])['OK']'.</msg>
-<status status="PASS" starttime="20220329 00:47:30.701" endtime="20220329 00:47:31.466"/>
+<msg timestamp="20220329 12:53:43.573" level="INFO">Clicking button '(//button[@class="sc-htoDjs gtMZoW"])['OK']'.</msg>
+<status status="PASS" starttime="20220329 12:53:43.572" endtime="20220329 12:53:44.774"/>
 </kw>
-<status status="PASS" starttime="20220329 00:47:30.418" endtime="20220329 00:47:31.467"/>
+<status status="PASS" starttime="20220329 12:53:43.310" endtime="20220329 12:53:44.776"/>
 </kw>
 <kw name="Carregando arquivo de dados" library="BasePage">
 <arg>WebMotors/${json_string}</arg>
@@ -88,39 +88,40 @@
 <var>${string_file}</var>
 <arg>${EXECDIR}/resources/fixtures/${json_file}</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20220329 00:47:31.471" level="INFO" html="true">Getting file '&lt;a href="file://C:\QANinja\WebMotors\resources\fixtures\WebMotors\webmotors.json"&gt;C:\QANinja\WebMotors\resources\fixtures\WebMotors\webmotors.json&lt;/a&gt;'.</msg>
-<msg timestamp="20220329 00:47:31.472" level="INFO">${string_file} = {
-    "CARRO":"toyota corolla"
+<msg timestamp="20220329 12:53:44.782" level="INFO" html="true">Getting file '&lt;a href="file://C:\QANinja\processo-webmotors\WebMotors\resources\fixtures\WebMotors\webmotors.json"&gt;C:\QANinja\processo-webmotors\WebMotors\resources\fixtures\WebMotors\webmotors.json&lt;/a&gt;'.</msg>
+<msg timestamp="20220329 12:53:44.783" level="INFO">${string_file} = {
+    "CARRO":"toyota corolla",
+    "MOTO":"honda"
 
 }</msg>
-<status status="PASS" starttime="20220329 00:47:31.470" endtime="20220329 00:47:31.472"/>
+<status status="PASS" starttime="20220329 12:53:44.781" endtime="20220329 12:53:44.783"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${jsob_object}</var>
 <arg>json.loads($string_file)</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20220329 00:47:31.479" level="INFO">${jsob_object} = {'CARRO': 'toyota corolla'}</msg>
-<status status="PASS" starttime="20220329 00:47:31.472" endtime="20220329 00:47:31.480"/>
+<msg timestamp="20220329 12:53:44.789" level="INFO">${jsob_object} = {'CARRO': 'toyota corolla', 'MOTO': 'honda'}</msg>
+<status status="PASS" starttime="20220329 12:53:44.783" endtime="20220329 12:53:44.790"/>
 </kw>
-<msg timestamp="20220329 00:47:31.481" level="INFO">${acao_json} = {'CARRO': 'toyota corolla'}</msg>
-<status status="PASS" starttime="20220329 00:47:31.469" endtime="20220329 00:47:31.481"/>
+<msg timestamp="20220329 12:53:44.790" level="INFO">${acao_json} = {'CARRO': 'toyota corolla', 'MOTO': 'honda'}</msg>
+<status status="PASS" starttime="20220329 12:53:44.779" endtime="20220329 12:53:44.790"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${acao_json}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20220329 00:47:31.484" level="INFO">${acao_json} = {'CARRO': 'toyota corolla'}</msg>
-<status status="PASS" starttime="20220329 00:47:31.482" endtime="20220329 00:47:31.484"/>
+<msg timestamp="20220329 12:53:44.791" level="INFO">${acao_json} = {'CARRO': 'toyota corolla', 'MOTO': 'honda'}</msg>
+<status status="PASS" starttime="20220329 12:53:44.790" endtime="20220329 12:53:44.791"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220329 00:47:31.985" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20220329 00:47:31.484" endtime="20220329 00:47:31.986"/>
+<msg timestamp="20220329 12:53:45.305" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20220329 12:53:44.791" endtime="20220329 12:53:45.305"/>
 </kw>
-<status status="PASS" starttime="20220329 00:47:31.468" endtime="20220329 00:47:31.987"/>
+<status status="PASS" starttime="20220329 12:53:44.777" endtime="20220329 12:53:45.305"/>
 </kw>
-<status status="PASS" starttime="20220329 00:47:28.538" endtime="20220329 00:47:31.987"/>
+<status status="PASS" starttime="20220329 12:53:41.332" endtime="20220329 12:53:45.305"/>
 </kw>
 <kw name="Quando valido que estou na pagina do WebMotors" library="webmotorsActions">
 <kw name="Verificar se o Elemento está visível" library="helpers">
@@ -131,55 +132,73 @@
 <arg>${Espera_Global}</arg>
 <arg>'Elemento ${Elemento} não está visível'</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220329 00:47:31.994" endtime="20220329 00:47:32.285"/>
+<status status="PASS" starttime="20220329 12:53:45.315" endtime="20220329 12:53:45.634"/>
 </kw>
-<status status="PASS" starttime="20220329 00:47:31.992" endtime="20220329 00:47:32.285"/>
+<status status="PASS" starttime="20220329 12:53:45.313" endtime="20220329 12:53:45.634"/>
 </kw>
-<status status="PASS" starttime="20220329 00:47:31.990" endtime="20220329 00:47:32.285"/>
+<status status="PASS" starttime="20220329 12:53:45.305" endtime="20220329 12:53:45.634"/>
 </kw>
-<kw name="Então realizo a consulta de um veiculo" library="webmotorsActions">
+<kw name="Então realizo a consulta de uma moto para comprar" library="webmotorsActions">
+<kw name="Clicar no Elemento" library="helpers">
+<arg>xpath=//*[@id="WhiteBox"]/div[1]/div[1]/h2[1]/a</arg>
+<doc>Keyword criada pra clicar em um elemento.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Elemento}</arg>
+<arg>${Espera_Global}</arg>
+<arg>'Elemento ${Elemento} não encontrado na página'</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220329 12:53:45.644" endtime="20220329 12:53:45.915"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Elemento}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220329 12:53:45.915" level="INFO">Clicking element 'xpath=//*[@id="WhiteBox"]/div[1]/div[1]/h2[1]/a'.</msg>
+<status status="PASS" starttime="20220329 12:53:45.915" endtime="20220329 12:53:46.353"/>
+</kw>
+<status status="PASS" starttime="20220329 12:53:45.634" endtime="20220329 12:53:46.354"/>
+</kw>
 <kw name="Set Campo Input" library="helpers">
 <arg>(//input[@id="searchBar"])</arg>
-<arg>${acao_json['CARRO']}</arg>
+<arg>${acao_json['MOTO']}</arg>
 <doc>Função reponsável por colocar valor no campo tipo input</doc>
 <kw name="Sleep" library="BuiltIn">
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220329 00:47:32.803" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20220329 00:47:32.290" endtime="20220329 00:47:32.804"/>
+<msg timestamp="20220329 12:53:46.866" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20220329 12:53:46.356" endtime="20220329 12:53:46.866"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${CAMPO_INPUT}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220329 00:47:32.804" endtime="20220329 00:47:32.945"/>
+<status status="PASS" starttime="20220329 12:53:46.866" endtime="20220329 12:53:46.992"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${CAMPO_INPUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220329 00:47:32.945" endtime="20220329 00:47:33.209"/>
+<status status="PASS" starttime="20220329 12:53:46.992" endtime="20220329 12:53:47.228"/>
 </kw>
 <kw name="Set Focus To Element" library="SeleniumLibrary">
 <arg>${CAMPO_INPUT}</arg>
 <doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220329 00:47:33.210" endtime="20220329 00:47:33.508"/>
+<status status="PASS" starttime="20220329 12:53:47.228" endtime="20220329 12:53:47.501"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${CAMPO_INPUT}</arg>
 <arg>${CAMPO_VALOR}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220329 00:47:33.511" level="INFO">Typing text 'toyota corolla' into text field '(//input[@id="searchBar"])'.</msg>
-<status status="PASS" starttime="20220329 00:47:33.509" endtime="20220329 00:47:33.964"/>
+<msg timestamp="20220329 12:53:47.501" level="INFO">Typing text 'honda' into text field '(//input[@id="searchBar"])'.</msg>
+<status status="PASS" starttime="20220329 12:53:47.501" endtime="20220329 12:53:47.953"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>${CAMPO_INPUT}</arg>
 <arg>TAB</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220329 00:47:33.965" level="INFO">Sending key(s) ('TAB',) to (//input[@id="searchBar"]) element.</msg>
-<msg timestamp="20220329 00:47:34.496" level="INFO">Pressing special key TAB to element.</msg>
-<msg timestamp="20220329 00:47:34.497" level="INFO">Releasing special key TAB.</msg>
-<status status="PASS" starttime="20220329 00:47:33.964" endtime="20220329 00:47:34.653"/>
+<msg timestamp="20220329 12:53:47.953" level="INFO">Sending key(s) ('TAB',) to (//input[@id="searchBar"]) element.</msg>
+<msg timestamp="20220329 12:53:48.501" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20220329 12:53:48.501" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20220329 12:53:47.953" endtime="20220329 12:53:48.651"/>
 </kw>
-<status status="PASS" starttime="20220329 00:47:32.288" endtime="20220329 00:47:34.654"/>
+<status status="PASS" starttime="20220329 12:53:46.354" endtime="20220329 12:53:48.652"/>
 </kw>
 <kw name="Clicar no Elemento" library="helpers">
 <arg>(//*[@class="Button Button--red-home"])['Ver Ofertas']</arg>
@@ -189,45 +208,62 @@
 <arg>${Espera_Global}</arg>
 <arg>'Elemento ${Elemento} não encontrado na página'</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220329 00:47:34.656" endtime="20220329 00:47:34.937"/>
+<status status="PASS" starttime="20220329 12:53:48.655" endtime="20220329 12:53:48.917"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Elemento}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220329 00:47:34.941" level="INFO">Clicking element '(//*[@class="Button Button--red-home"])['Ver Ofertas']'.</msg>
-<status status="PASS" starttime="20220329 00:47:34.938" endtime="20220329 00:47:35.267"/>
+<msg timestamp="20220329 12:53:48.917" level="INFO">Clicking element '(//*[@class="Button Button--red-home"])['Ver Ofertas']'.</msg>
+<status status="PASS" starttime="20220329 12:53:48.917" endtime="20220329 12:53:49.222"/>
 </kw>
-<status status="PASS" starttime="20220329 00:47:34.655" endtime="20220329 00:47:35.267"/>
+<status status="PASS" starttime="20220329 12:53:48.653" endtime="20220329 12:53:49.222"/>
 </kw>
-<status status="PASS" starttime="20220329 00:47:32.287" endtime="20220329 00:47:35.267"/>
+<status status="PASS" starttime="20220329 12:53:45.634" endtime="20220329 12:53:49.222"/>
 </kw>
-<kw name="E tenho o retorno do veiculo que foi realizada a pesquisa" library="webmotorsActions">
+<kw name="E tenho o retorno moto que foi pesquisa" library="webmotorsActions">
 <kw name="Verificar se o Elemento está visível" library="helpers">
-<arg>(//*[@class="ResultZero__header"])/strong["Ops, não encontramos nenhum carro como este!"]</arg>
+<arg>(//h1[@class="title-search"])["Motos Honda Novas e Usadas"]</arg>
 <doc>Keyword criada pra verificar se um elemento está visível</doc>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${Elemento}</arg>
 <arg>${Espera_Global}</arg>
 <arg>'Elemento ${Elemento} não está visível'</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220329 00:47:35.268" endtime="20220329 00:47:38.100"/>
+<status status="PASS" starttime="20220329 12:53:49.229" endtime="20220329 12:53:49.858"/>
 </kw>
-<status status="PASS" starttime="20220329 00:47:35.268" endtime="20220329 00:47:38.101"/>
+<status status="PASS" starttime="20220329 12:53:49.228" endtime="20220329 12:53:49.862"/>
 </kw>
-<status status="PASS" starttime="20220329 00:47:35.267" endtime="20220329 00:47:38.101"/>
+<status status="PASS" starttime="20220329 12:53:49.226" endtime="20220329 12:53:49.863"/>
 </kw>
 <kw name="Finalizando Teste" library="BasePage" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220329 00:47:38.500" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220329 00:47:38.105" endtime="20220329 00:47:38.500"/>
+<msg timestamp="20220329 12:53:50.441" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220329 12:53:49.872" endtime="20220329 12:53:50.441"/>
 </kw>
-<status status="PASS" starttime="20220329 00:47:38.104" endtime="20220329 00:47:38.501"/>
+<status status="PASS" starttime="20220329 12:53:49.868" endtime="20220329 12:53:50.442"/>
 </kw>
-<status status="PASS" starttime="20220329 00:47:28.534" endtime="20220329 00:47:38.504"/>
+<status status="PASS" starttime="20220329 12:53:41.332" endtime="20220329 12:53:50.442"/>
 </test>
-<doc>Validation of front SuperDigial - Squad Army Ants</doc>
-<status status="PASS" starttime="20220329 00:47:23.207" endtime="20220329 00:47:38.511"/>
+<kw name="Close Session" library="BasePage" type="TEARDOWN">
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${LOGGED}" == "logado"</arg>
+<arg>Log to console</arg>
+<arg>nÃO FECHA</arg>
+<arg>ELSE</arg>
+<arg>Close Browser</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220329 12:53:50.447" endtime="20220329 12:53:53.886"/>
+</kw>
+<status status="PASS" starttime="20220329 12:53:50.446" endtime="20220329 12:53:53.886"/>
+</kw>
+<status status="PASS" starttime="20220329 12:53:50.445" endtime="20220329 12:53:53.886"/>
+</kw>
+<doc>Utilizar o site para encontrar os seus futuros
+veículos, consulta preços e detalhe dos veículos</doc>
+<status status="PASS" starttime="20220329 12:53:31.717" endtime="20220329 12:53:53.886"/>
 </suite>
 <statistics>
 <total>
