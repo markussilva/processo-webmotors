@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20220329 15:47:02.949" rpa="false" schemaversion="2">
+<suite id="s1" name="Home" source="C:\QANinja\processo-webmotors\webmotorsAPK\tests\home.robot">
+<test id="s1-t1" name="Cenário 01: Ver listagem de veiculos do app">
+<kw name="Dado que abro o aplicativo" library="helpers" type="SETUP">
+<kw name="Open session" library="helpers">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>20</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220329 15:47:03.231" endtime="20220329 15:47:03.232"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UIAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/webmotors.apk</arg>
+<arg>udid=emulator-5554</arg>
+<arg>autoGrantPermissions=true</arg>
+<arg>autoAcceptAlerts=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220329 15:47:03.232" endtime="20220329 15:47:16.533"/>
+</kw>
+<kw name="Start Screen Recording" library="AppiumLibrary">
+<doc>Starts an asynchronous Screen Recording for the current open application.</doc>
+<status status="PASS" starttime="20220329 15:47:16.533" endtime="20220329 15:47:17.304"/>
+</kw>
+<status status="PASS" starttime="20220329 15:47:03.231" endtime="20220329 15:47:17.304"/>
+</kw>
+<status status="PASS" starttime="20220329 15:47:03.231" endtime="20220329 15:47:17.305"/>
+</kw>
+<kw name="E vejo que estou na pagina em que lista os veiculos" library="home.page">
+<kw name="Is visible" library="helpers">
+<arg>xpath://hierarchy/android.widget.FrameLayout/android.widget.LinearLayout</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${parm_element}</arg>
+<arg>60</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20220329 15:48:18.207" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="1776"&gt;
+  &lt;android.widget.FrameLayout index="0" package="br.com.siatiquosque.webmotorstest" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1776]" displayed="true"&gt;
+    &lt;android.widget.LinearLayout index="0" package="br.com.siatiquosque.webmotorstest" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1776]" displayed="true"&gt;
+      &lt;android.widget.FrameLayout index="0" package="br.com.siatiquosque.webmotorstest" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,72][1080,1776]" displayed="true"&gt;
+        &lt;android.view.ViewGroup index="0" package="br.com.siatiquosque.webmotorstest" class="android.view.ViewGroup" text="" resource-id="br.com.siatiquosque.webmotorstest:id/decor_content_parent" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,72][1080,1776]" displayed="true"&gt;
+          &lt;android.widget.FrameLayout index="0" package="br.com.siatiquosque.webmotorstest" class="android.widget.FrameLayout" text="" resource-id="br.com.siatiquosque.webmotorstest:id/action_bar_container" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,72][1080,240]" displayed="true"&gt;
+            &lt;android.view.ViewGroup index="0" package="br.com.siatiquosque.webmotorstest" class="android.view.ViewGroup" text="" resource-id="br.com.siatiquosque.webmotorstest:id/action_bar" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,72][1080,240]" displayed="true"&gt;
+              &lt;android.widget.TextView index="0" package="br.com.siatiquosque.webmotorstest" class="android.widget.TextView" text="Carros" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,115][225,196]" displayed="true" /&gt;
+            &lt;/android.view.ViewGroup&gt;
+          &lt;/android.widget.FrameLayout&gt;
+          &lt;android.widget.FrameLayout index="1" package="br.com.siatiquosque.webmotorstest" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,240][1080,1776]" displayed="true"&gt;
+            &lt;android.view.ViewGroup index="0" package="br.com.siatiquosque.webmotorstest" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,240][1080,1776]" displayed="true"&gt;
+              &lt;android.widget.FrameLayout index="0" package="br.com.siatiquosque.webmotorstest" class="android.widget.FrameLayout" text="" resource-id="br.com.siatiquosque.webmotorstest:id/nav_host_fragment" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,240][1080,1776]" displayed="true"&gt;
+                &lt;android.view.ViewGroup index="0" package="br.com.siatiquosque.webmotorstest" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,240][1080,1776]" displayed="true"&gt;
+                  &lt;android.view.ViewGroup index="0" package="br.com.siatiquosque.webmotorstest" class="android.view.ViewGroup" text="" resource-id="br.com.siatiquosque.webmotorstest:id/swCars" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,240][1080,1776]" displayed="true"&gt;
+                    &lt;androidx.recyclerview.widget.RecyclerView index="0" package="br.com.siatiquosque.webmotorstest" class="androidx.recyclerview.widget.RecyclerView" text="" resource-id="br.com.siatiquosque.webmotorstest:id/rvCars" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="true" selected="false" bounds="[0,240][1080,1776]" displayed="true"&gt;
+                      &lt;android.widget.FrameLayout index="0" package="br.com.siatiquosque.webmotorstest" class="android.widget.FrameLayout" text="" resource-id="br.com.siatiquosque.webmotorstest:id/root" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[24,264][1056,1177]" displayed="true"&gt;
+                        &lt;android.view.ViewGroup index="0" package="br.com.siatiquosque.webmotorstest" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[24,264][1056,1153]" displayed="true"&gt;
+                          &lt;android.widget.ImageView index="0" package="br.com.siatiquosque.webmotorstest" class="android.widget.ImageView" text="" resource-id="br.com.siatiquosque.webmotorstest:id/imgCar" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[24,264][1056,846]" displayed="true" /&gt;
+                          &lt;android.widget.TextView index="1" package="br.com.siatiquosque.webmotorstest" class="android.widget.TextView" text="R$ 59.000,00" resource-id="br.com.siatiquosque.webmotorstest:id/tvValue" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,870][1008,999]" displayed="true" /&gt;
+                          &lt;android.widget.TextView index="2" package="br.com.siatiquosque.webmotorstest" class="android.widget.TextView" text="City" resource-id="br.com.siatiquosque.webmotorstest:id/tvCarName" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,999][1008,1096]" displayed="true" /&gt;
+                          &lt;android.widget.TextView index="3" package="br.com.siatiquosque.webmotorstest" class="android.widget.TextView" text="2018/2017 | 0KM" resource-id="br.com.siatiquosque.webmotorstest:id/tvYearKm" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,1096][1008,1153]" displayed="true" /&gt;
+                        &lt;/android.view.ViewGroup&gt;
+                      &lt;/android.widget.FrameLayout&gt;
+                      &lt;android.widget.FrameLayout index="1" package="br.com.siatiquosque.webmotorstest" class="android.widget.FrameLayout" text="" resource-id="br.com.siatiquosque.webmotorstest:id/root" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[24,1225][1056,1776]" displayed="true"&gt;
+                        &lt;android.view.ViewGroup index="0" package="br.com.siatiquosque.webmotorstest" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[24,1225][1056,1776]" displayed="true"&gt;
+                          &lt;android.widget.ImageView index="0" package="br.com.siatiquosque.webmotorstest" class="android.widget.ImageView" text="" resource-id="br.com.siatiquosque.webmotorstest:id/imgCar" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[24,1225][1056,1776]" displayed="true" /&gt;
+                        &lt;/android.view.ViewGroup&gt;
+                      &lt;/android.widget.FrameLayout&gt;
+                    &lt;/androidx.recyclerview.widget.RecyclerView&gt;
+                  &lt;/android.view.ViewGroup&gt;
+                &lt;/android.view.ViewGroup&gt;
+              &lt;/android.widget.FrameLayout&gt;
+            &lt;/android.view.ViewGroup&gt;
+          &lt;/android.widget.FrameLayout&gt;
+        &lt;/android.view.ViewGroup&gt;
+      &lt;/android.widget.FrameLayout&gt;
+    &lt;/android.widget.LinearLayout&gt;
+  &lt;/android.widget.FrameLayout&gt;
+&lt;/hierarchy&gt;</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220329 15:48:20.365" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220329 15:48:18.207" endtime="20220329 15:48:20.365"/>
+</kw>
+<msg timestamp="20220329 15:48:20.374" level="FAIL">Element locator 'xpath://hierarchy/android.widget.FrameLayout/android.widget.LinearLayout' did not match any elements after 1 minute</msg>
+<status status="FAIL" starttime="20220329 15:47:17.308" endtime="20220329 15:48:20.374"/>
+</kw>
+<status status="FAIL" starttime="20220329 15:47:17.307" endtime="20220329 15:48:20.378"/>
+</kw>
+<status status="FAIL" starttime="20220329 15:47:17.306" endtime="20220329 15:48:20.381"/>
+</kw>
+<kw name="E fecho o aplicativo" library="helpers" type="TEARDOWN">
+<kw name="Close session" library="helpers">
+<doc>Função para fechar o aplicativo
+limpar a sessão do usuário no app.</doc>
+<kw name="Stop Screen Recording" library="AppiumLibrary">
+<doc>Gathers the output from the previously started screen recording              to a media file, then embeds it to the log.html(Android Only).</doc>
+<msg timestamp="20220329 15:48:21.951" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenrecord-1.mp4"&gt;&lt;video width="800px" controls&gt;&lt;source src="appium-screenrecord-1.mp4" type="video/mp4"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220329 15:48:20.393" endtime="20220329 15:48:21.952"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220329 15:48:23.714" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220329 15:48:21.952" endtime="20220329 15:48:23.715"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220329 15:48:23.715" endtime="20220329 15:48:24.757"/>
+</kw>
+<status status="PASS" starttime="20220329 15:48:20.392" endtime="20220329 15:48:24.757"/>
+</kw>
+<status status="PASS" starttime="20220329 15:48:20.391" endtime="20220329 15:48:24.758"/>
+</kw>
+<doc>Cadastramento de um novo cliente no sistema</doc>
+<tag>regression</tag>
+<tag>smoke</tag>
+<status status="FAIL" starttime="20220329 15:47:03.230" endtime="20220329 15:48:24.763">Element locator 'xpath://hierarchy/android.widget.FrameLayout/android.widget.LinearLayout' did not match any elements after 1 minute</status>
+</test>
+<status status="FAIL" starttime="20220329 15:47:02.951" endtime="20220329 15:48:24.770"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">regression</stat>
+<stat pass="0" fail="1" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Home">Home</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
