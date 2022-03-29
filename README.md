@@ -106,6 +106,7 @@ Todos os testes foram considerados apenas cenários positivos, e também o teste
 
 A montagem de keywords foi desenvolvida a partir do BDD. Por se tratar do app de produção, o último botão de confirmação de compra foi comentado. 
 
+Foi realizado a automação mobile em python + robot e selenium para validar os objetos de uma apk;
 Foram criados 3 cenarios criados, para a demonstração de conhecimento em automação;
 
 Obrigado pelo teste, estou à disposição para quaisquer esclarecimentos.
